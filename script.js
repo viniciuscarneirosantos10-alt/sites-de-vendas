@@ -59,35 +59,4 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="product-info">
                     <h3 class="product-name">${product.name}</h3>
                     <p class="product-category">${product.category}</p>
-                    <p class="product-price">R$ ${product.price.toFixed(2).replace('.', ',')}</p>
-                    <button class="btn-add-cart" data-id="${product.id}">Adicionar ao Carrinho</button>
-                </div>
-            </div>
-        `).join('');
-    }
-
-    function updateCartCount() {
-        cartCountElement.textContent = cart.length;
-    }
-
-    // Delegação de evento para adicionar ao carrinho
-    productGrid.addEventListener('click', (event) => {
-        if (event.target.classList.contains('btn-add-cart')) {
-            const button = event.target;
-            const productId = parseInt(button.dataset.id);
-            cart.push(productId);
-            updateCartCount();
-
-            // Feedback visual no botão
-            button.textContent = 'ADICIONADO!';
-            button.style.backgroundColor = '#555';
-            setTimeout(() => {
-                button.textContent = 'Adicionar ao Carrinho';
-                button.style.backgroundColor = 'var(--color-dark)';
-            }, 1500);
-        }
-    });
-
-    // Renderização inicial dos produtos
-    renderProducts();
-});
+                    <p class="produc
