@@ -1,62 +1,62 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- DADOS DAS CHUTEIRAS (Simulando API) ---
     const products = [
         {
-            id: 1,
-            name: 'QUADRA VOLT PRO',
-            category: 'Chuteira de Futsal',
-            price: 799.99,
-            image: 'https://i.ibb.co/L5kNbvD/futsal-shoe-hero.png'
+            name: 'Yamaha MT-07',
+            price: 'R$ 45.490',
+            image: 'https://images.pexels.com/photos/1715193/pexels-photo-1715193.jpeg?auto=compress&cs=tinysrgb&w=600'
         },
         {
-            id: 2,
-            name: 'QUADRA SHADOW STRIKE',
-            category: 'Chuteira de Futsal',
-            price: 649.90,
-            image: 'https://i.ibb.co/v32s8R6/futsal-shoe-2.png'
+            name: 'Honda CB 650R',
+            price: 'R$ 51.100',
+            image: 'https://images.pexels.com/photos/10484341/pexels-photo-10484341.jpeg?auto=compress&cs=tinysrgb&w=600'
         },
         {
-            id: 3,
-            name: 'QUADRA AGILE KNIT',
-            category: 'Chuteira de Futsal',
-            price: 729.90,
-            image: 'https://i.ibb.co/pwnL8xH/futsal-shoe-3.png'
+            name: 'Kawasaki Z900',
+            price: 'R$ 57.990',
+            image: 'https://images.pexels.com/photos/8996695/pexels-photo-8996695.jpeg?auto=compress&cs=tinysrgb&w=600'
         },
         {
-            id: 4,
-            name: 'QUADRA CLASSIC LEATHER',
-            category: 'Chuteira de Futsal',
-            price: 599.99,
-            image: 'https://i.ibb.co/gZ7k2yF/futsal-shoe-4.png'
+            name: 'Harley-Davidson Sportster S',
+            price: 'R$ 125.900',
+            image: 'https://images.pexels.com/photos/9303350/pexels-photo-9303350.jpeg?auto=compress&cs=tinysrgb&w=600'
         },
         {
-            id: 5,
-            name: 'QUADRA GHOST X',
-            category: 'Chuteira de Futsal',
-            price: 849.50,
-            image: 'https://i.ibb.co/68H14vB/futsal-shoe-5.png'
+            name: 'BMW R1250 GS',
+            price: 'R$ 96.500',
+            image: 'https://images.pexels.com/photos/1413412/pexels-photo-1413412.jpeg?auto=compress&cs=tinysrgb&w=600'
         },
         {
-            id: 6,
-            name: 'QUADRA CONTROL 360',
-            category: 'Chuteira de Futsal',
-            price: 699.90,
-            image: 'https://i.ibb.co/4Z5vM9R/futsal-shoe-6.png'
+            name: 'Ducati Panigale V4',
+            price: 'R$ 162.990',
+            image: 'https://images.pexels.com/photos/3513238/pexels-photo-3513238.jpeg?auto=compress&cs=tinysrgb&w=600'
+        },
+        {
+            name: 'Vespa Primavera 150',
+            price: 'R$ 31.900',
+            image: 'https://images.pexels.com/photos/5929285/pexels-photo-5929285.jpeg?auto=compress&cs=tinysrgb&w=600'
+        },
+        {
+            name: 'Triumph Bonneville T120',
+            price: 'R$ 59.490',
+            image: 'https://images.pexels.com/photos/2116475/pexels-photo-2116475.jpeg?auto=compress&cs=tinysrgb&w=600'
         }
     ];
 
     const productGrid = document.getElementById('product-grid');
-    const cartCountElement = document.getElementById('cart-count');
-    let cart = [];
 
-    // Função para renderizar os produtos na grade
-    function renderProducts() {
-        productGrid.innerHTML = products.map(product => `
-            <div class="product-card">
-                <div class="product-image-container">
-                    <img src="${product.image}" alt="${product.name}" class="product-image">
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">${product.name}</h3>
-                    <p class="product-category">${product.category}</p>
-                    <p class="produc
+    products.forEach(product => {
+        const productCard = document.createElement('div');
+        productCard.className = 'product-card';
+
+        productCard.innerHTML = `
+            <img src="${product.image}" alt="${product.name}">
+            <div class="product-info">
+                <h3>${product.name}</h3>
+                <p class="price">${product.price}</p>
+                <button>Ver Detalhes</button>
+            </div>
+        `;
+
+        productGrid.appendChild(productCard);
+    });
+});
