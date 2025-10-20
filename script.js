@@ -1,62 +1,62 @@
-document.addEventListener('DOMContentLoaded', () => {
+
+    document.addEventListener('DOMContentLoaded', function() {
+
+    // LISTA DE PRODUTOS (MOTOS)
+    // Para adicionar uma nova moto, basta copiar um bloco {...}, colar e alterar as informações.
     const products = [
         {
-            name: 'Yamaha MT-07',
-            price: 'R$ 45.490',
-            image: 'https://images.pexels.com/photos/1715193/pexels-photo-1715193.jpeg?auto=compress&cs=tinysrgb&w=600'
+            name: 'Yamaha MT-09',
+            price: 'R$ 58.490,00',
+            image: 'https://images.pexels.com/photos/10484341/pexels-photo-10484341.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
         },
         {
-            name: 'Honda CB 650R',
-            price: 'R$ 51.100',
-            image: 'https://images.pexels.com/photos/10484341/pexels-photo-10484341.jpeg?auto=compress&cs=tinysrgb&w=600'
+            name: 'Kawasaki Ninja 400',
+            price: 'R$ 35.810,00',
+            image: 'https://images.pexels.com/photos/233036/pexels-photo-233036.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
         },
         {
-            name: 'Kawasaki Z900',
-            price: 'R$ 57.990',
-            image: 'https://images.pexels.com/photos/8996695/pexels-photo-8996695.jpeg?auto=compress&cs=tinysrgb&w=600'
-        },
-        {
-            name: 'Harley-Davidson Sportster S',
-            price: 'R$ 125.900',
-            image: 'https://images.pexels.com/photos/9303350/pexels-photo-9303350.jpeg?auto=compress&cs=tinysrgb&w=600'
+            name: 'Honda CB 1000R',
+            price: 'R$ 78.870,00',
+            image: 'https://images.pexels.com/photos/1715193/pexels-photo-1715193.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
         },
         {
             name: 'BMW R1250 GS',
-            price: 'R$ 96.500',
-            image: 'https://images.pexels.com/photos/1413412/pexels-photo-1413412.jpeg?auto=compress&cs=tinysrgb&w=600'
+            price: 'R$ 96.500,00',
+            image: 'https://images.pexels.com/photos/1413412/pexels-photo-1413412.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+        },
+        {
+            name: 'Harley-Davidson Fat Boy',
+            price: 'R$ 119.900,00',
+            image: 'https://images.pexels.com/photos/2530590/pexels-photo-2530590.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
         },
         {
             name: 'Ducati Panigale V4',
-            price: 'R$ 162.990',
-            image: 'https://images.pexels.com/photos/3513238/pexels-photo-3513238.jpeg?auto=compress&cs=tinysrgb&w=600'
-        },
-        {
-            name: 'Vespa Primavera 150',
-            price: 'R$ 31.900',
-            image: 'https://images.pexels.com/photos/5929285/pexels-photo-5929285.jpeg?auto=compress&cs=tinysrgb&w=600'
-        },
-        {
-            name: 'Triumph Bonneville T120',
-            price: 'R$ 59.490',
-            image: 'https://images.pexels.com/photos/2116475/pexels-photo-2116475.jpeg?auto=compress&cs=tinysrgb&w=600'
+            price: 'R$ 162.990,00',
+            image: 'https://images.pexels.com/photos/3513238/pexels-photo-3513238.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
         }
     ];
 
+    // Seleciona o container onde os produtos serão inseridos
     const productGrid = document.getElementById('product-grid');
 
+    // Cria e insere o HTML para cada produto na página
     products.forEach(product => {
+        // Cria um elemento div para o card do produto
         const productCard = document.createElement('div');
         productCard.className = 'product-card';
 
+        // Define o conteúdo HTML do card com as informações do produto
         productCard.innerHTML = `
             <img src="${product.image}" alt="${product.name}">
             <div class="product-info">
                 <h3>${product.name}</h3>
                 <p class="price">${product.price}</p>
-                <button>Ver Detalhes</button>
+                <button class="btn-buy">Comprar Agora</button>
             </div>
         `;
 
+        // Adiciona o card criado à grade de produtos
         productGrid.appendChild(productCard);
     });
+
 });
