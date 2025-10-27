@@ -12,7 +12,7 @@
         {
             name: 'Kawasaki Ninja 400',
             price: 'R$ 35.810,00',
-            image: 'https://images.pexels.com/photos/233036/pexels-photo-233036.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+            image: 'kawasaki-ninja-400
         },
         {
             name: 'Honda CB 1000R',
