@@ -17,7 +17,7 @@
         {
             name: 'Honda CB 1000R',
             price: 'R$ 78.870,00',
-            image: 'https://images.pexels.com/photos/1715193/pexels-photo-1715193.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+            image: 'https://imagens-prod.microwork.inf.br/modelos/23/versoes/45/cores/186.jpg?v=20250924'
         },
         {
             name: 'BMW R1250 GS',
